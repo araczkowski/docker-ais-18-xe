@@ -25,7 +25,7 @@ docker run -d --name $CONTAINER_NAME \
         -v $PWD/scripts/setup:/opt/oracle/scripts/setup \
         -v $PWD/scripts/startup:/opt/oracle/scripts/startup \
         -v $PWD/files:/tmp/files \
-        oracle/database:18.4.0-xe
+        araczkowski/ais-dom-18-xe
 
 echo "##### Tailing logs. Ctrl-C to exit. #####"
 docker logs -f $CONTAINER_NAME
