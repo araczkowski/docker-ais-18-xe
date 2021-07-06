@@ -42,12 +42,18 @@ Using the sample settings, the following are accessible:
 
 ## Moving the container to nex box
 
-    ```bash
-    sudo tar -cvpf oradata.tar oradata
-    ```
+```bash
+sudo tar -cvpf oradata.tar oradata
+```
 
-    ```bash
-    sudo scp oradata.tar user@host:/tmp
-    ```
 
-etc.. 
+```bash
+sudo scp oradata.tar user@host:/tmp
+```
+
+or
+
+```bash
+cd docker-ais-18-xe
+scp -r -P 7777 root@server-ip:/...../docker-ais-18-xe/oradata/ .
+```
