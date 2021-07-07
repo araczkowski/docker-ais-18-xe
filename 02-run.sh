@@ -49,6 +49,7 @@ else
           -v $PWD/$HOST_DATA_DIR:/opt/oracle/oradata \
           -v $PWD/scripts/setup:/opt/oracle/scripts/setup \
           -v $PWD/scripts/startup:/opt/oracle/scripts/startup \
+          -e TZ="Europe/Warsaw" \
           -v $FILES_DIR:/tmp/files \
           --tmpfs /dev/shm:rw,exec,size=2G \
           oracle/database:${DB_VERSION}-${DB_EDITION}
