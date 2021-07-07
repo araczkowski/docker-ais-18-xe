@@ -38,7 +38,7 @@ if [[ $RTU_ENABLED =~ ^(Y|y)$ ]]; then
           -p ${DOCKER_DB_PORT:-51521}:1521 \
           --env-file $ENV_FILE \
           --tmpfs /dev/shm:rw,exec,size=2G \
-          oracle/database:${DB_VERSION}-${DB_EDITION}
+          araczkowski/ais-dom-18-xe:20210707
 else
   docker run -d --name $CONTAINER_NAME \
           --network ${DOCKER_NETWORK_NAME} \
@@ -52,7 +52,7 @@ else
           -e TZ="Europe/Warsaw" \
           -v $FILES_DIR:/tmp/files \
           --tmpfs /dev/shm:rw,exec,size=2G \
-          oracle/database:${DB_VERSION}-${DB_EDITION}
+          araczkowski/ais-dom-18-xe:20210707
 fi
 
 echo "##### Tailing logs. Ctrl-C to exit. #####"
