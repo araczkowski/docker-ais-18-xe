@@ -84,8 +84,14 @@ $RECYCLE.BIN/
 # End of https://www.gitignore.io/api/osx,macos,linux,windows
 *.zip
 *.rpm
+*.tar
+*.gz
+*.swp
 tmp
 dockerfiles
 oradata
+*-oradata
+*.env
+*.bak
 
 files/jdk-8u291-linux-x64.tar.gz
